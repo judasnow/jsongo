@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;jsongo&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../club-srv" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../clubserver" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../rank-srv" />
+      <root url="file://$PROJECT_DIR$/../gogogo" />
+      <root url="file://$PROJECT_DIR$/../baymax" />
+      <root url="file://$PROJECT_DIR$/../data-srv" />
+      <root url="file://$PROJECT_DIR$/../storage-srv" />
+      <root url="file://$PROJECT_DIR$/../push-srv" />
+      <root url="file://$PROJECT_DIR$/../pk-srv" />
+      <root url="file://$PROJECT_DIR$/../user-srv" />
+      <root url="file://$PROJECT_DIR$/../activity-srv" />
+      <root url="file://$PROJECT_DIR$/../api" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../club-srv" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../clubserver" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../rank-srv" />
+      <root url="file://$PROJECT_DIR$/../gogogo" />
+      <root url="file://$PROJECT_DIR$/../baymax" />
+      <root url="file://$PROJECT_DIR$/../data-srv" />
+      <root url="file://$PROJECT_DIR$/../storage-srv" />
+      <root url="file://$PROJECT_DIR$/../push-srv" />
+      <root url="file://$PROJECT_DIR$/../pk-srv" />
+      <root url="file://$PROJECT_DIR$/../user-srv" />
+      <root url="file://$PROJECT_DIR$/../activity-srv" />
+      <root url="file://$PROJECT_DIR$/../api" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
