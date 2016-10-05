@@ -23,7 +23,7 @@ func (r FARule) inspect() {
 type FARulebook struct {
 	rules []FARule
 }
-// GO 的默认初始化为 0 值，感觉就像是
+// GO 的默认初始化为 0 值，感觉就像是一种默认的构造函数
 
 //func NewFARulebook(rules []FARule) FARulebook {
 //	return FARulebook{
@@ -64,6 +64,14 @@ func NewDFA(crtState state, acceptStats []state, ruleBook FARulebook) DFA {
 		ruleBook: ruleBook,
 	}
 }
+func (dfa DFA) readChar (char rune) {
+	dfa.crtState = dfa.ruleBook.nextState(dfa.crtState, string(char))
+}
+func (dfa DFA) readString (str string) {
+	for _, c := range str {
+		dfa.readChar(c)
+	}
+}
 
 func main() {
 	b := FARulebook{
@@ -76,7 +84,7 @@ func main() {
 			FARule{state: 3, char: "b", nextState: 3},
 		},
 	}
-
-	dfa := NewDFA(1, []state{1,3}, b)
+	dfa := NewDFA(1, []state{3}, b)
+	dfa.readString("baaab")
 	fmt.Println(dfa.accepting())
 }
