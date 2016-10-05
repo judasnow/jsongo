@@ -23,6 +23,8 @@ func (r FARule) inspect() {
 type FARulebook struct {
 	rules []FARule
 }
+// GO 的默认初始化为 0 值，感觉就像是
+
 //func NewFARulebook(rules []FARule) FARulebook {
 //	return FARulebook{
 //		status: rules,
@@ -41,6 +43,28 @@ func (book FARulebook) ruleFor(state state, char string) FARule {
 	panic("no rule")
 }
 
+type DFA struct {
+	crtState state
+	acceptStats []state
+	ruleBook FARulebook
+}
+// 当前状态是不是刻意接收的状态
+func (dfa DFA) accepting () bool {
+	for _, s := range dfa.acceptStats {
+		if s == dfa.crtState {
+			return true
+		}
+	}
+	return false
+}
+func NewDFA(crtState state, acceptStats []state, ruleBook FARulebook) DFA {
+	return DFA{
+		crtState: crtState,
+		acceptStats: acceptStats,
+		ruleBook: ruleBook,
+	}
+}
+
 func main() {
 	b := FARulebook{
 		rules: []FARule{
@@ -53,6 +77,6 @@ func main() {
 		},
 	}
 
-	fmt.Printf("%+v\n", b)
-	fmt.Println("%s", b.nextState(1, "b"))
+	dfa := NewDFA(1, []state{1,3}, b)
+	fmt.Println(dfa.accepting())
 }
